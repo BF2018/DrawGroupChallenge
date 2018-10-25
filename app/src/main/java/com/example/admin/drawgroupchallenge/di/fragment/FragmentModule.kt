@@ -11,7 +11,9 @@ import dagger.Provides
 class FragmentModule(val fragment: Fragment) {
 
     @Provides
+
     @FragmentScope
+
     fun providesAddCountryViewModel(addCountryViewModelFactory: AddCountryViewModelFactory) =
         ViewModelProviders.of(fragment, addCountryViewModelFactory)
             .get(AddCountryViewModel::class.java)
